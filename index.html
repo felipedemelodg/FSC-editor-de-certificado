@@ -1,11 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="pt-bt">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSC certificados</title>
 </head>
+
 <body>
-    
-</body>
-</html>
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FSC editor de certificados</title>
+        <!-- Incluir a biblioteca jsPDF -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <!-- Incluir a biblioteca html2canvas -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <!-- Incluir a biblioteca html2pdf -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+        <link rel="stylesheet" href="/src/style/style.css">
+    </head>
+
+    <body>
+
+        <form id="trainingForm">
+            <label for="instructorName">Nome do Instrutor:</label>
+            <input type="text" id="instructorName" name="instructorName" required>
+
+            <label for="studentName">Nome do Aluno:</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <label for="cpf">CPF do Aluno:</label>
+            <input type="text" id="cpf" name="cpf" required>
+
+
+            <label for="texto-complentar">Descrição do treinamento:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50">
+            </textarea>
+
+            <label for="trainingName">Nome do Treinamento:</label>
+            <input type="text" id="trainingName" name="trainingName" required>
+
+            <label for="date">Data (Dia/Mês/Ano):</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="promotedBy">Promovido por:</label>
+            <input type="text" id="promotedBy" name="promotedBy" required>
+
+            <label for="hours">Carga Horária (horas):</label>
+            <input type="number" id="hours" name="hours" required>
+
+            <label for="nr">NR (Norma Regulamentadora):</label>
+            <input type="text" id="nr" name="nr" required>
+
+            <button type="button" id="generate">Gerar Certificado</button>
+            <button type="button" id="download">Baixar PDF</button>
+        </form>
+
+        <section class="certificado" id="certificado">
+            <img src="/img/logo-apresentacao.png" alt="">
+            <div class="decoração">
+                <p>Certificado</p>
+                <div></div>
+                <div></div>
+            </div>
+            <p class="NRs">NR</p>
+            <section class="texto-principal">
+                <h2>A FSC SEGURANÇA DO TRABALHO, CONCEDE ESTE CERTIFICADO A</h2>
+                <h1 class="nome-do-aluno"> nome do aluno </h1>
+                <h3 class="cpf-do-aluno">cpf do aluno</h3>
+                <p>Certiﬁcamos que o Sr ou Sra nome do aluno ou aluna texto complementar</p>
+                <p>em conformidade com a Normas e regulamento na data de: data do treinamento</p>
+                <p>promovido por: nome da empresa que promovel. com a carga horaria de: carga horaria</p>
+            </section>
+            <section class="dados-do-instrutor">
+                <hr>
+                <strong class="nome-do-instrutor">
+                    nome do instrutor
+                </strong>
+                <p class="linha-1">
+                    dados do instrutor
+                    dados do instrutor
+                </p>
+            </section>
+            <section class="dados-do-responsavel">
+                <hr>
+                <strong class="nome-do-responsavel">
+                    nome do instrutor
+                </strong>
+                <p class="linha-1">
+                    dados do instrutor
+                    dados do instrutor
+                </p>
+            </section>
+        </section>
+
+        <script src="/src/script/main.js">
+
+        </script>
+    </body>
+
+    </html>

@@ -1,0 +1,44 @@
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+        * {
+            font-family: 'Oswald', 'sans';
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+
+        }
+
+        .certificado {
+            width: 297mm;
+            height: 210mm;
+            background-image: url('/img/decoração.webp');
+            background-repeat: no-repeat;
+            background-size: auto 210mm;
+            background-position: 100% 0;
+        }
+
+        main {
+            display: flex;
+        }
+
+        form {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-size: 10pt;
+        }
