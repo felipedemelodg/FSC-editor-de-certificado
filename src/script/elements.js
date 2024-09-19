@@ -7,6 +7,7 @@ export const nomeAluno = formulario.querySelector('#nomeAluno');
 export const cpfAluno = formulario.querySelector('#cpfAluno');
 export const nomeTreinamento = formulario.querySelector('#nomeTreinamento');
 export const data = formulario.querySelector('#data');
+
 export const promovidoPor = formulario.querySelector('#promovidoPor');
 export const cargaHoraria = formulario.querySelector('#cargaHoraria');
 export const nr = formulario.querySelector('#nr');
@@ -31,3 +32,76 @@ export const certificacaoDoInstrutorNoTexto = document.querySelector('.certifica
 export const baixarPdf = document.querySelector('#baixarPdf')
 export const certificado = document.querySelector('#certificado')
 
+export const erroNomeAluno = document.querySelector('#erroNomeAluno')
+export const erroCpfAluno = document.querySelector('#erroCpfAluno')
+export const erroNomeTreinamento = document.querySelector('#erroNomeTreinamento')
+export const errotextoComplementar = document.querySelector('#errotextoComplementar')
+export const erroData = document.querySelector('#erroData')
+export const erroPromovidoPor = document.querySelector('#erroPromovidoPor')
+export const erroCargaHoraria = document.querySelector('#erroCargaHoraria')
+export const erroNr = document.querySelector('#erroNr')
+export const erroNomeInstrutor = document.querySelector('#erroNomeInstrutor')
+export const erroCertificacaoDoInstrutor = document.querySelector('#erroCertificacaoDoInstrutor')
+export const erroRgDoInstrutor = document.querySelector('#erroRgDoInstrutor')
+
+
+export const carregarDados = document.querySelector('#carregarDados')
+
+
+export const campos = [
+    nomeAluno,
+    cpfAluno,
+    nomeTreinamento,
+    textoComplementar,
+    data,
+    promovidoPor,
+    cargaHoraria,
+    nr,
+    nomeInstrutor,
+    rgDoInstrutor,
+    certificacaoDoInstrutor,
+]
+export const entradas = [
+    nomeDoAlunoEntrada,
+    cpfDoAlunoEntrada,
+    nomeDoAlunoNoTexto,
+    textoComplementarEntrada,
+    NRsEntrada,
+    dataNoTexto,
+    promovidoProEntrada,
+    cargaHorariaEntrada,
+    nomeInstrutorEntrada,
+    rgDoIntrutorNoTexto,
+    certificacaoDoInstrutorNoTexto
+]
+
+export const valores = [
+    nomeAluno,
+    cpfAluno,
+    nomeAluno,
+    textoComplementar,
+    nr,
+    data,
+    promovidoPor,
+    cargaHoraria,
+    nomeInstrutor,
+    rgDoInstrutor,
+    certificacaoDoInstrutor
+]
+
+
+export const errosEntrada =
+    [
+        erroNomeAluno,
+        erroCpfAluno,
+        erroNomeTreinamento,
+        errotextoComplementar,
+        erroData,
+        erroPromovidoPor,
+        erroCargaHoraria,
+        erroNr,
+        erroNomeInstrutor,
+        erroRgDoInstrutor,
+        erroCertificacaoDoInstrutor
+    ]
+export const listaErros = { campoCorreto: '', campoVazio: 'Vazio', textoPequeno: 'texto curto', contemNumeros:'contem numeros',contemLetras:'contem letras' }

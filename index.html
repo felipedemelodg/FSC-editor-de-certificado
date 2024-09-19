@@ -16,9 +16,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="/src/script/lib.js" defer></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script> -->
+      
         <link rel="stylesheet" href="/src/style/style.css">
     </head>
 
@@ -26,61 +24,77 @@
 
         <form id="formularioTreinamento">
 
-            <label for="nomeAluno">Nome do Aluno:</label>
+            <label for="nomeAluno">Nome do Aluno:
+                <span class="erro" id="erroNomeAluno"></span>
+            </label>
             <input type="text" id="nomeAluno" name="nomeAluno" required>
-            <span class="erro" id="erroNomeAluno"></span>
 
-            <label for="cpfAluno">CPF do Aluno:</label>
-            <input type="text" id="cpfAluno" name="cpfAluno" required pattern="\d{11}"
+
+            <label for="cpfAluno">CPF do Aluno:
+                <span class="erro" id="erroCpfAluno"></span>
+            </label>
+            <input type="text" id="cpfAluno" maxlength="14"
+            placeholder="___.___.___-__" name="cpfAluno" required pattern="\d{11}"
                 title="O CPF deve conter 11 dígitos numéricos.">
-            <span class="erro" id="erroCpfAluno"></span>
 
-            <label for="nomeTreinamento">Nome do Treinamento:</label>
+
+            <label for="nomeTreinamento">Treinamento:
+                <span class="erro" id="erroNomeTreinamento"></span>
+            </label>
             <input type="text" id="nomeTreinamento" name="nomeTreinamento" required>
-            <span class="erro" id="erroNomeTreinamento"></span>
 
-            <label for="textoComplementar">Texto complementar:</label>
-            <textarea name="" id="textoComplementar"></textarea>
-            <span class="erro" id="errotextoComplementar"></span>
+            <label for="textoComplementar">Texto complementar:
+                <span class="erro" id="errotextoComplementar"></span>
+            </label>
+            <textarea name="textoComplementar" id="textoComplementar"></textarea>
 
 
-            <label for="data">Data (Dia/Mês/Ano):</label>
+            <label for="data">Data (Dia/Mês/Ano):
+                <span class="erro" id="erroData"></span>
+            </label>
             <input type="date" id="data" name="data" required>
-            <span class="erro" id="erroData"></span>
 
-            <label for="promovidoPor">Promovido por:</label>
+            <label for="promovidoPor">Promovido por:
+                <span class="erro" id="erroPromovidoPor"></span>
+            </label>
             <input type="text" id="promovidoPor" name="promovidoPor" required>
-            <span class="erro" id="erroPromovidoPor"></span>
 
-            <label for="cargaHoraria">Carga Horária (horas):</label>
+            <label for="cargaHoraria">Carga Horária (horas):
+                <span class="erro" id="erroCargaHoraria"></span>
+            </label>
             <input type="number" id="cargaHoraria" name="cargaHoraria" required min="1" max="1000">
-            <span class="erro" id="erroCargaHoraria"></span>
 
-            <label for="nr">NR (Norma Regulamentadora):</label>
+            <label for="nr">NR (Norma Regulamentadora):
+                <span class="erro" id="erroNr"></span>
+            </label>
             <input type="text" id="nr" name="nr" required>
-            <span class="erro" id="erroNr"></span>
 
-            <label for="nomeInstrutor">Nome do Instrutor:</label>
+            <label for="nomeInstrutor">Nome do Instrutor:
+                <span class="erro" id="erroNomeInstrutor"></span>
+            </label>
             <input type="text" id="nomeInstrutor" name="nomeInstrutor" required>
-            <span class="erro" id="erroNomeInstrutor"></span>
 
-            <label for="dadosInstrutor">Dados do Instrutor:</label>
-            <label for="dadosInstrutor">Rg:</label>
-            <input type="text" id="rgDoInstrutor" name="rgDoInstrutor">
-            <span class="erro" id="erroRgDoInstrutor"></span>
-            <label for="dadosInstrutor">Certificacão do instrutor:</label>
+
+            <label for="dadosInstrutor">Rg do instrutor:
+                <span class="erro" id="erroRgDoInstrutor"></span>
+            </label>
+            <input type="text" maxlength="12" id="rgDoInstrutor" name="rgDoInstrutor">
+            <label for="dadosInstrutor">Certificacão do instrutor:
+                <span class="erro" id="erroCertificacaoDoInstrutor"></span>
+
+            </label>
             <input type="text" id="certificacaoDoInstrutor" name="certificacaoDoInstrutor">
-            <span class="erro" id="erroCertificacaoDoInstrutor"></span>
 
 
 
 
             <button type="button" id="gerarCertificado">Gerar Certificado</button>
             <button type="button" id="baixarPdf">Baixar PDF</button>
+            <!-- <button type="button" id="carregarDados">carregar dados</button> -->
         </form>
 
         <section class="certificado" id="certificado">
-            <img src="/img/logo-apresentacao.png" alt="">
+            <img src="/img/logo.png" alt="">
 
 
             <div class="decoracao">
@@ -100,7 +114,7 @@
             <section class="texto-principal">
                 <h2>A FSC SEGURANÇA DO TRABALHO, CONCEDE ESTE CERTIFICADO A</h2>
                 <h1 class="nome-do-aluno"> nome do aluno </h1>
-                <h3 class="cpf-do-aluno">cpf do aluno</h3>
+                <h3 class="cpf-do-aluno"></h3>
                 <section>
 
                     <p>Certificamos que o(a) Sr.(a) <strong class="nome-do-aluno-no-texto"></strong>
