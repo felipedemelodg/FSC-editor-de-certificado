@@ -1,13 +1,12 @@
-import { campos, entradas, erroCpfAluno, erroNomeAluno, erroNomeTreinamento, errosEntrada, listaErros, textoComplementar, valores } from "./elements.js";
-import { tamanhoDoTexto, temLetras, tratamentoBasico, tratamentoEspecifico, verSeEstaVazio, verSetTemNumeros } from "./functions.js";
-import { elementosTradados, tratarCargaHoraria, tratarCertificacaoDoInstrutor, tratarCPFDoAluno, tratarData, tratarNomeDoAluno, tratarNomeInstrutor, tratarNRs, tratarPromovidoPor, tratarRgInstrutor, tratarTextoComplementar, tratarTreinamento } from "./tratamentos.js";
+import { entradas, valores } from "./elements.js";
+import { elementosTradados } from "./tratamentos.js";
 
 
 
 
 export function validate() {
     elementosTradados.forEach(element => {
-        if(element() === true){
+        if (element() === true) {
             gerarCertificado()
         }
 
@@ -18,6 +17,7 @@ export function validate() {
 
 function gerarCertificado() {
     entradas.forEach((el, i, entrada) => {
+        console.log(valores[i].value,  entrada[i].innerHTML)
         const arr = valores[5].value.split('-')
         const arrPosicoes = [arr[0], arr[1], arr[2]] = [arr[2], arr[1], arr[0]]
         const arrComBarras = arrPosicoes.join().replace(/,/g, '/')

@@ -72,7 +72,8 @@ export const entradas = [
     cargaHorariaEntrada,
     nomeInstrutorEntrada,
     rgDoIntrutorNoTexto,
-    certificacaoDoInstrutorNoTexto
+    certificacaoDoInstrutorNoTexto,
+    NRsNoTexto
 ]
 
 export const valores = [
@@ -86,7 +87,9 @@ export const valores = [
     cargaHoraria,
     nomeInstrutor,
     rgDoInstrutor,
-    certificacaoDoInstrutor
+    certificacaoDoInstrutor,
+    nr
+
 ]
 
 
