@@ -141,7 +141,7 @@
   .assinaturas {
       display: flex;
       justify-content: space-around;
-      align-items: center;
+      align-items: end;
       margin-top: 20mm;
   }
 
