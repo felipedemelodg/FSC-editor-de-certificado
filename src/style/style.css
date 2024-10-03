@@ -142,7 +142,7 @@
       display: flex;
       justify-content: space-around;
       align-items: end;
-      margin-top: 10mm;
+      margin: 5mm 40mm 0 30mm;
   }
   .assinaturas>section>img{
     width: 60mm;
