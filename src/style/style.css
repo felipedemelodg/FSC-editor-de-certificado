@@ -144,7 +144,9 @@
       align-items: end;
       margin-top: 20mm;
   }
-
+  .assinaturas>section>img{
+    width: 60mm;
+  }
   .dados-do-instrutor,
   .dados-do-responsavel {
       display: flex;
