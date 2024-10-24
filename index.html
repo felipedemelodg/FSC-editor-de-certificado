@@ -16,7 +16,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="/src/script/lib.js" defer></script>
-      
         <link rel="stylesheet" href="/src/style/style.css">
     </head>
 
@@ -33,9 +32,8 @@
             <label for="cpfAluno">CPF do Aluno:
                 <span class="erro" id="erroCpfAluno"></span>
             </label>
-            <input type="text" id="cpfAluno" maxlength="14"
-            placeholder="___.___.___-__" name="cpfAluno" required pattern="\d{11}"
-                title="O CPF deve conter 11 dígitos numéricos.">
+            <input type="text" id="cpfAluno" maxlength="14" placeholder="___.___.___-__" name="cpfAluno" required
+                pattern="\d{11}" title="O CPF deve conter 11 dígitos numéricos.">
 
 
             <label for="nomeTreinamento">Treinamento:
@@ -84,19 +82,21 @@
 
             </label>
             <input type="text" id="certificacaoDoInstrutor" name="certificacaoDoInstrutor">
-
-
-
-
             <button type="button" id="gerarCertificado">Gerar Certificado</button>
             <button type="button" id="baixarPdf">Baixar PDF</button>
-            <!-- <button type="button" id="carregarDados">carregar dados</button> -->
         </form>
 
         <section class="certificado" id="certificado">
-            <img src="/img/logo.png" alt="">
-
-
+            <section class="logo-container">
+                <img src="img/logo.webp" class="logo" alt="">
+            </section>
+            <section class="medalhaContaier">
+                <img src="img/medalha.webp" alt="">
+                <span class="NRs">
+                    NRs
+                </span>
+            </section>
+<!-- 
             <div class="decoracao">
                 <span>
                     <p>Certificado</p>
@@ -109,54 +109,54 @@
                     </span>
                 </section>
 
-            </div>
+            </div> -->
+            <section class="texto-container">
+                <section class="texto-principal">
+                    <h2>A FSC SEGURANÇA DO TRABALHO, CONCEDE ESTE CERTIFICADO A</h2>
+                    <h1 class="nome-do-aluno"> nome do aluno </h1>
+                    <h3 class="cpf-do-aluno"></h3>
+                    <section>
 
-            <section class="texto-principal">
-                <h2>A FSC SEGURANÇA DO TRABALHO, CONCEDE ESTE CERTIFICADO A</h2>
-                <h1 class="nome-do-aluno"> nome do aluno </h1>
-                <h3 class="cpf-do-aluno"></h3>
-                <section>
+                        <p>Certificamos que o(a) Sr.(a) <strong class="nome-do-aluno-no-texto"></strong>
+                            <span class="textoComplementarEntrada"></span>
+                            <strong class="NRsNoTexto"></strong>, na data de:
+                            <strong class="dataNoTexto"></strong>,
 
-                    <p>Certificamos que o(a) Sr.(a) <strong class="nome-do-aluno-no-texto"></strong>
-                        <span class="textoComplementarEntrada"></span>
-                        <strong class="NRsNoTexto"></strong>, na data de:
-                        <strong class="dataNoTexto"></strong>,
-
-                        promovido por:
-                        <strong class="promovidoProEntrada"></strong> com a carga horaria de:
-                        <strong class="cargaHorariaEntrada"></strong> horas.
-                    </p>
+                            promovido por:
+                            <strong class="promovidoProEntrada"></strong> com a carga horaria de:
+                            <strong class="cargaHorariaEntrada"></strong> horas.
+                        </p>
+                    </section>
                 </section>
-            </section>
-            <section class="assinaturas">
-                <section class="dados-do-instrutor">
-                    <img src="/img/assinatura-instrutor.png" alt="">
-                    <hr>
-                    <strong class="nome-do-instrutor">
-                        nome do instrutor
-                    </strong>
-                    
-                    <p class="rgDoIntrutorNoTexto">
-                        
-                        
+                <section class="assinaturas">
+                    <section class="dados-do-instrutor">
+                        <img src="/img/assinatura-instrutor.webp" alt="">
+                        <hr>
+                        <strong class="nome-do-instrutor">
+                            nome do instrutor
+                        </strong>
+
+                        <p class="rgDoIntrutorNoTexto">
+
+
                         <p class="certificacaoDoInstrutorNoTexto"></p>
-                    </p>
-                    
-                </section>
-                <section class="dados-do-responsavel">
-                    <img src="/img/assinatura-fabio.png" alt="">
-                    <hr>
-                    <strong class="nome-do-responsavel">
-                        Fabio Sampaio
-                    </strong>
-                    <p class="dados-do-responsavel">
-                        FSC SEGURANÇA DO TRABALHO <br>
-                        CNPJ 39.522.472/0001-40
-                    </p>
+                        </p>
+
+                    </section>
+                    <section class="dados-do-responsavel">
+                        <img src="/img/assinatura-dono.webp" alt="">
+                        <hr>
+                        <strong class="nome-do-responsavel">
+                            Fabio Sampaio
+                        </strong>
+                        <p class="dados-do-responsavel">
+                            FSC SEGURANÇA DO TRABALHO <br>
+                            CNPJ 39.522.472/0001-40
+                        </p>
+                    </section>
                 </section>
             </section>
         </section>
-
         <script type="module" src="/src/script/main.js">
 
         </script>

@@ -1,4 +1,4 @@
-import { cargaHoraria, cargaHorariaEntrada, certificacaoDoInstrutor, certificacaoDoInstrutorNoTexto, cpfAluno, cpfDoAlunoEntrada, data, dataNoTexto, erroNomeAluno, listaErros, nomeAluno, nomeDoAlunoEntrada, nomeDoAlunoNoTexto, nomeInstrutor, nomeInstrutorEntrada, nomeTreinamento, nr, NRsEntrada, NRsNoTexto, promovidoPor, promovidoProEntrada, rgDoInstrutor, rgDoIntrutorNoTexto, textoComplementar, textoComplementarEntrada } from "./elements.js";
+import { cargaHoraria,  certificacaoDoInstrutor, certificacaoDoInstrutorNoTexto, certificado, cpfAluno, cpfDoAlunoEntrada, data, dataNoTexto, erroNomeAluno, listaErros, nomeAluno, nomeDoAlunoEntrada, nomeDoAlunoNoTexto, nomeInstrutor, nomeInstrutorEntrada, nomeTreinamento, nr, NRsEntrada, NRsNoTexto, promovidoPor, promovidoProEntrada, rgDoInstrutor, rgDoIntrutorNoTexto, textoComplementar, textoComplementarEntrada } from "./elements.js";
 
 export function model() {
     nomeAluno.value = 'Fabio Sampaio'
@@ -18,18 +18,64 @@ export function model() {
 
 export function salvarPdf() {
     const { jsPDF } = window.jspdf;
+
+    // Remova temporariamente o 'scale' da classe 'certificado'
+    const certificadoElement = document.querySelector('.certificado');
+    certificadoElement.style.transform = 'none';  // Remove o scale temporariamente
+
     const doc = new jsPDF({
         orientation: 'landscape',
         unit: 'pt',
         format: 'a4'
     });
 
-    html2pdf().from(certificado).set({
-        margin: 10,
-        filename: nomeAluno.value+'_'+nr.value+'.pdf',
-        jsPDF: { unit: 'pt', format: 'a4', orientation: 'landscape' }
-    }).save();
+    const options = {
+        margin: 1,
+        filename: nomeAluno.value + '_' + nr.value + '.pdf',
+        jsPDF: { unit: 'pt', format: 'a4', orientation: 'landscape' },
+        html2canvas: {
+            scale: 1.5,  // Ajuste de escala do canvas
+            logging: true
+        }
+    };
+
+    // Gera o PDF
+    html2pdf().set(options).from(certificadoElement).save().then(() => {
+        // Restaure o 'scale' após salvar o PDF
+        certificadoElement.style.transform = 'scale(0.8)';
+    });
 }
+
+// export function salvarPdf() {
+//     const { jsPDF } = window.jspdf;
+//     const doc = new jsPDF({
+//         orientation: 'landscape',
+//         unit: 'pt',
+//         format: 'a4'
+//     });
+
+//     const options = {
+//         margin: 1,
+//         filename: nomeAluno.value + '_' + nr.value + '.pdf',
+//         jsPDF: { unit: 'pt', format: 'a4', orientation: 'landscape' },
+//         html2canvas: {
+//             scale: 1.5, // Ajuste de escala
+//             logging: true, // Para ajudar a depurar, se necessário
+//         }
+//     };
+
+//     html2pdf().set(options).from(certificado).save();
+    
+//     // html2pdf().from(certificado).set({
+//     //     margin: 1,
+//     //     filename: nomeAluno.value+'_'+nr.value+'.pdf',
+//     //     jsPDF: { unit: 'pt', format: 'a4', orientation: 'landscape' },
+//     //     html2canvas: {
+//     //         scale: 1.5, // Ajuste de escala
+//     //         logging: true, // Para ajudar a depurar, se necessário
+//     //     }
+//     // }).save();
+// }
 
 
 

@@ -1,4 +1,4 @@
-import { baixarPdf, carregarDados, cpfAluno, data, dataNoTexto, erroNomeInstrutor, gerarCertificado, nomeAluno, nomeInstrutor, nr } from "./elements.js";
+import { baixarPdf,  cpfAluno, data, dataNoTexto, erroNomeInstrutor, gerarCertificado, nomeAluno, nomeInstrutor, nr } from "./elements.js";
 import { cpfMask, model, rgMasck, salvarPdf, tamanhoDoTexto, verSeEstaVazio, verSetTemNumeros } from "./functions.js";
 import { validate } from "./validate.js";
 

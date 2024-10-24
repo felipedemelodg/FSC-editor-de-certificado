@@ -3,7 +3,7 @@
   @page {
       size: A4;
       margin: 1cm;
-      
+
   }
 
   * {
@@ -12,12 +12,22 @@
       padding: 0;
       box-sizing: border-box;
       overflow: hidden;
+      color: #3e4095;
       /* text-align: center; */
+  }
+
+  hr {
+      background-color: #1a1919;
+      border: 0.0mm solid #1a1919;
+      height: 0.5mm;
   }
 
   body {
       display: flex;
       height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(192, 192, 192);
 
   }
 
@@ -44,30 +54,80 @@
       font-size: 10pt;
   }
 
+
+  .NRs {
+      position: absolute;
+      bottom: 0mm;
+      width: 42mm;
+      height: 42mm;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .medalhaContaier {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 42mm;
+      height: 103mm;
+      position: absolute;
+      top: 5.5mm;
+      right: 31mm;
+  }
+
+  .logo-container {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 200px;
+      top: 17mm;
+  }
+
+  .logo {
+      position: absolute;
+      /* margin: 0 auto; */
+      left: calc(296mm/2 - 33.5mm);
+  }
+
   .certificado {
-      width: 297mm;
-      height: 210mm;
-      background-image: url('/img/lateral.webp');
+      transform: scale(0.8);
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      width: 296mm;
+      height: 209mm;
+      background-image: url('/img/fundo.webp');
       background-repeat: no-repeat;
-      background-size: auto 90%;
+      background-size: contain;
       background-position: 100% 0;
-      /* margin: 10px; */
-      /* border: 1px solid gray; */
 
   }
 
   .certificado>img {
+
       width: 180px;
-     position: relative;
-     top: 10mm;
+      position: relative;
+      top: 10mm;
   }
 
+  .texto-container {
+    display: flex;
+    margin-bottom: 4mm;
+    height: 135mm;
+    /* background: lawngreen; */
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
   .decoracao {
+      display: none;
       color: white;
       text-transform: uppercase;
       font-weight: bold;
       height: auto;
-      display: flex;
       align-items: center;
       font-size: 34pt;
       position: relative;
@@ -104,12 +164,6 @@
       /* top: -15mm; */
   }
 
-  .NRs {
-      position: relative;
-      /* right: 60mm; */
-      font-size: 20pt;
-  }
-
   .texto-principal {
       text-align: center;
       color: #1a1919;
@@ -144,9 +198,11 @@
       align-items: end;
       margin: 5mm 40mm 0 30mm;
   }
-  .assinaturas>section>img{
-    width: 60mm;
+
+  .assinaturas>section>img {
+      width: 60mm;
   }
+
   .dados-do-instrutor,
   .dados-do-responsavel {
       display: flex;
@@ -154,7 +210,7 @@
       text-align: center;
   }
 
-  .erro{
-    color: red;
-    font-size: 10pt;
+  .erro {
+      color: red;
+      font-size: 10pt;
   }
