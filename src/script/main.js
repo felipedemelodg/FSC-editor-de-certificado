@@ -1,13 +1,11 @@
-import { baixarPdf,  cpfAluno, data, dataNoTexto, erroNomeInstrutor, gerarCertificado, nomeAluno, nomeInstrutor, nr } from "./elements.js";
-import { cpfMask, model, rgMasck, salvarPdf, tamanhoDoTexto, verSeEstaVazio, verSetTemNumeros } from "./functions.js";
+import {  baixarPdf, dados, gerarCertificado, imgAssinatura, instrutoresLista, nomesQualificacoes } from "./elements.js";
+import { blocoDeDados,  cpfMask, model, salvarPdf, } from "./functions.js";
 import { validate } from "./validate.js";
 
+
 model()
-baixarPdf.addEventListener('click',()=>{salvarPdf()})
-gerarCertificado.addEventListener('click',()=>{validate()})
-// carregarDados.addEventListener('click',()=>{model()})
+baixarPdf.addEventListener('click', () => { salvarPdf() })
+gerarCertificado.addEventListener('click', () => { validate() })
 
-document.addEventListener('DOMContentLoaded', ()=>{cpfMask()})
-document.addEventListener('DOMContentLoaded', ()=>{rgMasck()})
+document.addEventListener('DOMContentLoaded', () => { cpfMask() })
 
-// console.log(nr)

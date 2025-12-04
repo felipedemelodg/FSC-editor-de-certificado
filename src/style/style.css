@@ -114,13 +114,13 @@
   }
 
   .texto-container {
-    display: flex;
-    margin-bottom: 4mm;
-    height: 135mm;
-    /* background: lawngreen; */
-    flex-direction: column;
-    justify-content: space-evenly;
-}
+      display: flex;
+      margin-bottom: 4mm;
+      height: 135mm;
+      /* background: lawngreen; */
+      flex-direction: column;
+      justify-content: space-evenly;
+  }
 
   .decoracao {
       display: none;
@@ -193,14 +193,51 @@
   }
 
   .assinaturas {
+      /* background-color: antiquewhite; */
       display: flex;
       justify-content: space-around;
       align-items: end;
       margin: 5mm 40mm 0 30mm;
+      flex-direction: column;
   }
 
   .assinaturas>section>img {
       width: 60mm;
+  }
+
+  .assinaturaImg {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      align-items: flex-end;
+      overflow: visible;
+  }
+
+  .imgAssinatura {
+      width: 200px;
+  }
+
+  .assinaturaInstrutor {
+    overflow: visible;
+}
+
+  /* .assinaturaResponsavel {
+      background-color: aquamarine;
+  }  */
+
+  .dadosInstrutorEResposavel {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+  }
+
+  .dados-do-instrutor {
+      margin-right: 50px;
+  }
+
+  .dados-do-responsavel {
+      margin-right: 10px;
+
   }
 
   .dados-do-instrutor,
@@ -208,6 +245,10 @@
       display: flex;
       flex-direction: column;
       text-align: center;
+  }
+
+  .dados {
+      white-space: wrap;
   }
 
   .erro {

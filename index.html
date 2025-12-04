@@ -67,21 +67,23 @@
             </label>
             <input type="text" id="nr" name="nr" required>
 
-            <label for="nomeInstrutor">Nome do Instrutor:
+            <label for="nomeInstrutor">Instrutores:
                 <span class="erro" id="erroNomeInstrutor"></span>
             </label>
-            <input type="text" id="nomeInstrutor" name="nomeInstrutor" required>
-
-
-            <label for="dadosInstrutor">Rg do instrutor:
+            <select id="instrutoresLista" name="instrutoresLista" required>
+                <option value="instrutor-01" selected>Rivaldo Fernandes da Fonseca</option>
+                <option value="instrutor-02">Luiz Alves</option>
+                <option value="instrutor-03">Umberto Alves</option>
+            </select>
+            <!-- <input type="text" id="nomeInstrutor" name="nomeInstrutor" required> -->
+            <!-- <label for="dadosInstrutor">Rg do instrutor:
                 <span class="erro" id="erroRgDoInstrutor"></span>
             </label>
             <input type="text" maxlength="12" id="rgDoInstrutor" name="rgDoInstrutor">
             <label for="dadosInstrutor">Certificacão do instrutor:
                 <span class="erro" id="erroCertificacaoDoInstrutor"></span>
-
-            </label>
-            <input type="text" id="certificacaoDoInstrutor" name="certificacaoDoInstrutor">
+            </label> -->
+            <!-- <input type="text" id="certificacaoDoInstrutor" name="certificacaoDoInstrutor"> -->
             <button type="button" id="gerarCertificado">Gerar Certificado</button>
             <button type="button" id="baixarPdf">Baixar PDF</button>
         </form>
@@ -96,7 +98,7 @@
                     NRs
                 </span>
             </section>
-<!-- 
+            <!-- 
             <div class="decoracao">
                 <span>
                     <p>Certificado</p>
@@ -129,30 +131,44 @@
                     </section>
                 </section>
                 <section class="assinaturas">
-                    <section class="dados-do-instrutor">
-                        <img src="/img/assinatura-instrutor.webp" alt="">
-                        <hr>
-                        <strong class="nome-do-instrutor">
-                            nome do instrutor
-                        </strong>
-
-                        <p class="rgDoIntrutorNoTexto">
-
-
-                        <p class="certificacaoDoInstrutorNoTexto"></p>
-                        </p>
-
+                    <section class="assinaturaImg">
+                        <section class="assinaturaInstrutor">
+                            <img class="imgAssinatura" alt="">
+                            <hr>
+                        </section>
+                        <section class="assinaturaResponsavel">
+                            <img src="/img/assinatura-dono.webp" alt="">
+                            <hr>
+                        </section>
                     </section>
-                    <section class="dados-do-responsavel">
-                        <img src="/img/assinatura-dono.webp" alt="">
-                        <hr>
-                        <strong class="nome-do-responsavel">
-                            Fabio Sampaio
-                        </strong>
-                        <p class="dados-do-responsavel">
-                            FSC SEGURANÇA DO TRABALHO <br>
-                            CNPJ 39.522.472/0001-40
-                        </p>
+                    <section class="dadosInstrutorEResposavel">
+
+                        <section class="dados-do-instrutor">
+                            <strong class="nome-do-instrutor">
+                                nome do instrutor
+                            </strong>
+                            <p class="dados">
+
+                            </p>
+
+                            <p class="rgDoIntrutorNoTexto">
+
+
+                            <p class="certificacaoDoInstrutorNoTexto"></p>
+                            </p>
+
+                        </section>
+                        <section class="dados-do-responsavel">
+                            <!-- <hr> -->
+                            <strong class="nome-do-responsavel">
+                                Fabio Sampaio
+                            </strong>
+                            <p class="dados-do-responsavel">
+                                FSC SEGURANÇA DO TRABALHO <br>
+                                CNPJ 39.522.472/0001-40
+                            </p>
+                        </section>
+
                     </section>
                 </section>
             </section>
